@@ -3,7 +3,7 @@ const edit = async function (event) {
     const title = document.querySelector('#title').value.trim();
     const content = document.querySelector('#content').value.trim();
     const id = window.location.pathname.split('/').pop();
-    
+
     if (title && content) {
         const response = await fetch(`/api/blogPost/${id}`, {
             method: 'PUT',
@@ -19,3 +19,5 @@ const edit = async function (event) {
         }
     }
 }
+
+document.querySelector('.edit-post-form').addEventListener('submit', edit);
