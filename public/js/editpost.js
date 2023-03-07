@@ -1,7 +1,7 @@
 const edit = async function (event) {
     event.preventDefault();
-    const title = document.querySelector('#title').value.trim();
-    const content = document.querySelector('#content').value.trim();
+    const title = document.querySelector('#post-title').value.trim();
+    const content = document.querySelector('#post-body').value.trim();
     const id = window.location.pathname.split('/').pop();
 
     if (title && content) {
