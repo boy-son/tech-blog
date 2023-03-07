@@ -5,5 +5,5 @@ const homeRoutes = require('./home-routes');
 const dBoardRoutes = require('./dashBoardRoutes');
 router.use('/', homeRoutes);
 router.use('/api', apiRoutes);
-router.use('/dboard', dBoardRoutes);
+router.use('/dashboard', dBoardRoutes);
 module.exports = router;
