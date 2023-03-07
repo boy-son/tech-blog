@@ -1,11 +1,11 @@
 const newPost = async (event) => {
     event.preventDefault();
-    const title = document.querySelector('#title').value.trim();
-    const content = document.querySelector('#content').value.trim();
-    if (title && content) {
+    const title = document.querySelector('#post-title').value.trim();
+    const body= document.querySelector('#post-body').value.trim();
+    if (title && body) {
         const response = await fetch(`/api/blogPost`, {
             method: 'POST',
-            body: JSON.stringify({ title, content }),
+            body: JSON.stringify({ title, body }),
             headers: {
                 'Content-Type': 'application/json'
             }
@@ -18,4 +18,4 @@ const newPost = async (event) => {
     }
 }
 
-document.querySelector('.new-post-form').addEventListener('submit', newPost);
+document.querySelector('.new-post-btn').addEventListener('submit', newPost);
