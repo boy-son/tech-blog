@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
     }
 });
 
-router.get('/login', (req,res) => {
+router.get('/user/login', (req,res) => {
     try {
         res.render('login', {layout: 'dashboard'})
     } catch (err) {
@@ -16,7 +16,7 @@ router.get('/login', (req,res) => {
     }
 });
 
-router.get('/signup', (req, res) => {
+router.get('/user/signup', (req, res) => {
     try {
         res.render('signup', {layout: 'dashboard'})
     } catch (err) {

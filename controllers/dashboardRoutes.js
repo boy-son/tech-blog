@@ -1,8 +1,8 @@
-const router = require('express').Router;
+const router = require('express').Router();
 
 router.get('/', (req, res) => {
     try {
-        res.render('loggedInPosts', {layout: 'dashboard'})
+        res.render('allPosts', {layout: 'dashboard'})
     } catch (err) {
         res.status(500).json(err);
     }

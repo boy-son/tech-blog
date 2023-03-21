@@ -8,10 +8,23 @@
     <div class="card-footer">
         <p>Posted by {{post.user.username}} on {{format_date post.createdAt}}</p>
     </div>
-{#if  }
+{#if post.comments }
     <div class="card-header">
         <h2>Comments</h2>
     </div>
+    <div class="card-body">
+        {{#each post.comments}}
+            <div class="comment card">
+                <div class="card-body">
+                    <p>{{this.body}}</p>
+                </div>
+                <div class="card-footer">
+                    <p>Posted by {{this.user.username}} on {{format_date this.createdAt}}</p>
+                </div>
+            </div>
+        {{/each}}
+        </div>
+    {{/if}}
 
 
 <script src="../public/js/comment.js"></script>
