@@ -2,7 +2,7 @@ const router = require('express').Router();
 
 
 const homeRoutes = require('./home-routes');
-const dBoardRoutes = require('./dashBoardRoutes');
+const dBoardRoutes = require('./dashboardRoutes');
 const commentRoutes = require('./commentRoutes');
 const userRoutes = require('./userRoutes');
 const blogPostRoutes = require('./blogPostRoutes');
